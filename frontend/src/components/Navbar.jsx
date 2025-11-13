@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-full flex flex-col justify-between items-center bg-secondary py-4">
       <div className="w-[85%] flex justify-between">
-        <div className="flex justify-between items-center text-white font-rubik text-sm w-[20%] cursor-pointer">
+        <div className="flex justify-between items-center text-white font-rubik text-sm gap-4 md:gap-6  cursor-pointer">
           <PrimaryButton
             text="Student Login"
             bgColor="bg-[#FFBA00]"
@@ -23,7 +23,7 @@ const Navbar = () => {
             px="px-2"
           />
         </div>
-        <div className="flex justify-between w-[8%] items-center">
+        <div className="flex justify-between md:gap-6 lg:gap-4 sm:gap-4 gap-4 items-center">
           <img
             src={facebookIcon}
             alt="Facebook"

@@ -26,7 +26,7 @@ const LandingPage5 = () => {
   }, [thoughts.length]);
 
   return (
-    <div className="relative w-full h-screen flex justify-center items-center bg-primary">
+    <div className="relative w-full h-full flex justify-center items-center bg-primary py-20">
         {/* Decorative Circles */}
       <Circle
         size="27px"
@@ -40,7 +40,7 @@ const LandingPage5 = () => {
       />
       <div className="w-[85%] h-1/2 flex rounded-[25px] overflow-hidden shadow-lg">
         {/* LEFT SECTION */}
-        <div className="w-1/2  font-rubik flex flex-col justify-center items-center bg-[#E54981] text-white text-center">
+        <div className="w-1/2  font-rubik flex flex-col justify-center items-center py-20 bg-[#E54981] text-white text-center">
           <h1 className="text-[42px] font-semibold mb-3">Boost KS2 Results</h1>
           <p className="text-base w-[70%] leading-relaxed">
             Build strong foundations in Maths and English with fun, interactive lessons. 
