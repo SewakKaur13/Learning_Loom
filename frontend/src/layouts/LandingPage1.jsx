@@ -23,13 +23,6 @@ const LandingPage1 = () => {
         position="top-250 left-3 animate-bounce-slow"
         className="bg-[#ED4883] tablet:top-200 tablet:left-5 mobile:top-250 laptop:bottom-85 laptop:left-5"
       />
-
-      <Circle
-        size="40px"
-        color="#FFBA00"
-        position="laptop:bottom-5 laptop:left-65  animate-bounce-slow"
-        className="tablet:left-3 tablet:bottom-55 mobile:top-350 mobile:left-3"
-      />
       <Circle
         size="27px"
         color="#00C3A5"
