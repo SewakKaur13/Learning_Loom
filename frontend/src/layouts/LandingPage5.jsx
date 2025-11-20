@@ -26,7 +26,7 @@ const LandingPage5 = () => {
   }, [thoughts.length]);
 
   return (
-    <div className="relative w-full h-screen flex justify-center items-center bg-primary">
+    <div className="relative w-full h-full flex justify-center items-center bg-primary py-20">
         {/* Decorative Circles */}
       <Circle
         size="27px"
@@ -38,10 +38,10 @@ const LandingPage5 = () => {
         color="#FFBA00"
         position="bottom-50 right-10 animate-bounce-slow"
       />
-      <div className="w-[85%] h-1/2 flex rounded-[25px] overflow-hidden shadow-lg">
+      <div className="laptop:w-[85%] w-[90%] h-full laptop:h-1/2 flex laptop:flex-row flex-col rounded-[25px] overflow-hidden shadow-lg">
         {/* LEFT SECTION */}
-        <div className="w-1/2  font-rubik flex flex-col justify-center items-center bg-[#E54981] text-white text-center">
-          <h1 className="text-[42px] font-semibold mb-3">Boost KS2 Results</h1>
+        <div className="laptop:w-1/2 w-full  font-rubik flex flex-col justify-center items-center py-20 bg-[#E54981] text-white text-center">
+          <h1 className="text-[clamp(24px,5vw,42px)] font-semibold mb-3">Boost KS2 Results</h1>
           <p className="text-base w-[70%] leading-relaxed">
             Build strong foundations in Maths and English with fun, interactive lessons. 
             Track progress and empower every learner to achieve their best.
@@ -49,14 +49,14 @@ const LandingPage5 = () => {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="w-1/2  flex flex-col justify-center items-center bg-[#220F48] text-white relative">
-          <div className="absolute left-[-45px] bg-white rounded-full size-[92px] flex justify-center items-center shadow-lg">
+        <div className="laptop:w-1/2 w-full py-20  flex flex-col justify-center items-center bg-[#220F48] text-white relative">
+          <div className="absolute laptop:left-[-45px] -top-10 laptop:top-auto bg-white rounded-full size-[92px] flex justify-center items-center shadow-lg">
             <img src={book} alt="Book" className="" />
           </div>
           {/* Thought display */}
           <p
             key={currentThought}
-            className="text-3xl w-[70%] font-semibold text-center leading-relaxed transition-all duration-700 ease-in-out"
+            className="text-[clamp(24px,5vw,36px)] w-[70%] font-semibold text-center leading-relaxed transition-all duration-700 ease-in-out"
           >
             {thoughts[currentThought]}
           </p>

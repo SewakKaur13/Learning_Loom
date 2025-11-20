@@ -15,50 +15,50 @@ const LandingPage1 = () => {
         size="40px"
         color="#417CD4"
         position="top-30 left-30 animate-bounce-slow"
+        className=" mobile:top-50 mobile:left-10 mobile:block hidden"
       />
+
       <Circle
         size="27px"
-        color="#ED4883"
-        position="bottom-85 left-5 animate-bounce-slow"
-      />
-      <Circle
-        size="40px"
-        color="#FFBA00"
-        position="bottom-15 left-65  animate-bounce-slow"
+        position="top-250 left-3 animate-bounce-slow"
+        className="bg-[#ED4883] tablet:top-200 tablet:left-5 mobile:top-250 laptop:bottom-85 laptop:left-5"
       />
       <Circle
         size="27px"
         color="#00C3A5"
-        position="top-95 right-105  animate-bounce-slow"
+        position="top-95 right-10  animate-bounce-slow"
       />
       <Circle
         size="27px"
         color="#7D4BC0"
-        position="bottom-25 right-85  animate-bounce-slow"
+        position="laptop:bottom-25 laptop:right-85  animate-bounce-slow"
+        className="mobile:bottom-5 mobile:left-20 tablet:bottom-5 tablet:right-50"
       />
       <Circle
         size="40px"
         color="#FFBA00"
-        position="top-50 right-30  animate-bounce-slow"
+        position="laptop:top-50 laptop:right-30  animate-bounce-slow"
+        className="tablet:top-220 tablet:right-5 mobile:top-280 mobile:right-3 hidden mobile:block"
       />
       <Circle
         size="40px"
         color="#DD3F3F"
-        position="bottom-50 right-5  animate-bounce-slow"
+        position="laptop:bottom-50 laptop:right-5  animate-bounce-slow"
+        className="mobile:bottom-120 mobile:right-10 hidden mobile:block"
       />
 
       {/* Navbar */}
-      <div className="w-[85%] flex justify-between items-center py-4">
+      <div className="sm:w-[85%] flex justify-between items-center py-4 w-[90%]">
         {/* Logo + Title */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center sm:gap-2 gap-0.5">
           <img src={Logo} alt="Logo" className="w-12 h-12 object-contain" />
-          <p className="font-inter text-3xl font-light">
+          <p className="font-inter text-[clamp(20px,4vw,30px)] font-light">
             <span className="font-semibold text-[#E54981]">Learning</span>Loom
           </p>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-10 text-sm font-rubik text-[#473A59]">
+        <div className="flex items-center sm:gap-10 gap-4 text-[clamp(12px,1.5vw,14px)] font-rubik text-[#473A59]">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -102,12 +102,12 @@ const LandingPage1 = () => {
 
       {/* Hero Section */}
       <div className="flex flex-col items-center text-center flex-1 pt-6">
-        <h1 className="text-5xl md:text-6xl font-semibold text-[#040428] font-rubik mb-6 text-center leading-tight">
+        <h1 className="text-[clamp(24px,5vw,60px)] font-semibold text-[#040428] font-rubik mb-6 text-center leading-tight">
           Boost Maths and English <br className="hidden md:block" />
           <span className="block md:inline">skills</span>
         </h1>
 
-        <p className="text-[#504D4E] font-rubik font-normal text-[20px] mb-[54px]">
+        <p className="text-[#504D4E] font-rubik font-normal text-[clamp(16px,2vw,24px)] mb-[54px]">
           Learn. Play. Grow every day.
         </p>
 
@@ -122,8 +122,8 @@ const LandingPage1 = () => {
                 borderRadius: "50% / 25%", // capsule shape
                 transform:
                   index === 0 || index === 3
-                    ? "translateY(-60px)" // lift outer ones
-                    : "translateY(20px)", // lower middle ones
+                    ? "translateY(clamp(-20px, -6vw, -60px))" // outer ones lift responsively
+                    : "translateY(clamp(10px, 3vw, 20px))", // middle ones lower responsively
               }}
             ></div>
           ))}
